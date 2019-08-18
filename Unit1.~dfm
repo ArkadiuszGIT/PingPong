@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 192
-  Top = 124
+  Left = 256
+  Top = 123
   Width = 928
-  Height = 480
+  Height = 481
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,12 +19,12 @@ object Form1: TForm1
     Left = 0
     Top = 0
     Width = 912
-    Height = 442
+    Height = 443
     Align = alClient
     Brush.Color = clGreen
   end
   object b: TImage
-    Left = 424
+    Left = 416
     Top = 200
     Width = 32
     Height = 32
@@ -744,5 +744,11 @@ object Form1: TForm1
     OnTimer = bluebotTimer
     Left = 64
     Top = 312
+  end
+  object Timer_pilka: TTimer
+    Interval = 15
+    OnTimer = Timer_pilkaTimer
+    Left = 424
+    Top = 168
   end
 end

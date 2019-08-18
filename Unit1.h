@@ -21,6 +21,7 @@ __published:	// IDE-managed Components
         TTimer *redbot;
         TTimer *bluetop;
         TTimer *bluebot;
+        TTimer *Timer_pilka;
         void __fastcall bluetopTimer(TObject *Sender);
         void __fastcall bluebotTimer(TObject *Sender);
         void __fastcall redtopTimer(TObject *Sender);
@@ -29,6 +30,7 @@ __published:	// IDE-managed Components
           TShiftState Shift);
         void __fastcall FormKeyUp(TObject *Sender, WORD &Key,
           TShiftState Shift);
+        void __fastcall Timer_pilkaTimer(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

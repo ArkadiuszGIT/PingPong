@@ -8,6 +8,10 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 TForm1 *Form1;
+
+int x = -8;
+int y = -8;
+
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -59,4 +63,41 @@ void __fastcall TForm1::FormKeyUp(TObject *Sender, WORD &Key,
           if (Key == 'Z') bluebot->Enabled = false;
 }
 //---------------------------------------------------------------------------
- 
+
+void __fastcall TForm1::Timer_pilkaTimer(TObject *Sender)
+{
+        b->Left += x;
+        b->Top += y;
+
+        //odbij od góry
+        if(b->Top - 5 <= tlo->Top) y = -y;
+        //odbij od do³u
+        if(b->Top + b->Height + 5 >= tlo->Height) y = -y;
+
+        //gol lewo
+        if(b->Left <= bluep->Left - bluep->Width - 15)
+        {
+                Timer_pilka->Enabled = false;
+                b->Visible = false;
+        }
+        else if( b->Top > bluep->Top - b->Height/2 &&
+                 b->Top < bluep->Top + bluep->Height &&
+                 b->Left - b->Width < bluep->Left)
+                {
+                        if(x < 0) x = -x;
+                }
+
+        //gol prawo
+        if(b->Left >= redp->Left + redp->Width + 15)
+        {
+                Timer_pilka->Enabled = false;
+                b->Visible = false;
+        }
+        else if( b->Top > redp->Top - b->Height/2 &&
+                 b->Top < redp->Top + redp->Height &&
+                 b->Left + b->Width > redp->Left)
+                {
+                        if(x > 0) x = -x;
+                }
+}
+//---------------------------------------------------------------------------
