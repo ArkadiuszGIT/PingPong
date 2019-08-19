@@ -22,6 +22,12 @@ __published:	// IDE-managed Components
         TTimer *bluetop;
         TTimer *bluebot;
         TTimer *Timer_pilka;
+        TLabel *Label1;
+        TButton *Button1;
+        TLabel *Label2;
+        TLabel *Label3;
+        TLabel *Label4;
+        TButton *Button2;
         void __fastcall bluetopTimer(TObject *Sender);
         void __fastcall bluebotTimer(TObject *Sender);
         void __fastcall redtopTimer(TObject *Sender);
@@ -31,6 +37,8 @@ __published:	// IDE-managed Components
         void __fastcall FormKeyUp(TObject *Sender, WORD &Key,
           TShiftState Shift);
         void __fastcall Timer_pilkaTimer(TObject *Sender);
+        void __fastcall Button1Click(TObject *Sender);
+        void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);
