@@ -24,3 +24,11 @@ void __fastcall TForm2::Button1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
+
+void __fastcall TForm2::FormClose(TObject *Sender, TCloseAction &Action)
+{
+        Application->Terminate();
+}
+//---------------------------------------------------------------------------
+

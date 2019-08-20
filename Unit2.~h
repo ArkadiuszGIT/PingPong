@@ -13,7 +13,15 @@ class TForm2 : public TForm
 __published:	// IDE-managed Components
         TButton *Button1;
         TLabel *Label1;
+        TLabel *Label2;
+        TLabel *Label3;
+        TLabel *Label4;
+        TLabel *Label5;
+        TLabel *Label6;
+        TLabel *Label7;
+        TLabel *Label8;
         void __fastcall Button1Click(TObject *Sender);
+        void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm2(TComponent* Owner);
