@@ -1,10 +1,12 @@
 object Form1: TForm1
-  Left = 308
-  Top = 141
+  Left = 256
+  Top = 188
   Width = 928
   Height = 512
-  Caption = 'Form1'
+  Caption = 'PingPong by Arkadiusz'
   Color = clBtnFace
+  UseDockManager = True
+  DockSite = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -25,7 +27,7 @@ object Form1: TForm1
     Brush.Color = clGreen
   end
   object b: TImage
-    Left = 416
+    Left = 432
     Top = 200
     Width = 32
     Height = 32
@@ -724,9 +726,9 @@ object Form1: TForm1
   object Label1: TLabel
     Left = 312
     Top = 24
-    Width = 249
+    Width = 236
     Height = 58
-    Caption = 'Ping Pong'
+    Caption = 'PingPong'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -48
@@ -736,52 +738,69 @@ object Form1: TForm1
     Transparent = True
   end
   object Label2: TLabel
-    Left = 224
-    Top = 80
-    Width = 425
-    Height = 37
-    Alignment = taCenter
-    Caption = 'Punkt dla gracza niebieskiego'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -32
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Left = 0
+    Top = 0
+    Width = 37
+    Height = 80
+    Caption = '0'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -64
+    Font.Name = '@Adobe Gothic Std B'
+    Font.Style = [fsBold]
     ParentFont = False
+    Transparent = True
     Visible = False
   end
   object Label3: TLabel
-    Left = 408
-    Top = 136
-    Width = 43
-    Height = 37
-    Caption = '1:0'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -32
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Left = 872
+    Top = 0
+    Width = 37
+    Height = 80
+    Caption = '0'
+    Font.Charset = SHIFTJIS_CHARSET
+    Font.Color = clRed
+    Font.Height = -64
+    Font.Name = '@Adobe Gothic Std B'
+    Font.Style = [fsBold]
     ParentFont = False
+    Transparent = True
     Visible = False
   end
   object Label4: TLabel
-    Left = 344
-    Top = 192
-    Width = 159
+    Left = 304
+    Top = 128
+    Width = 270
     Height = 37
-    Caption = 'ilo'#347#263' odbi'#263':'
+    Caption = 'Niebieski wygrywa!'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
+    Font.Color = clBlue
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
+    Transparent = True
+    Visible = False
+  end
+  object Label5: TLabel
+    Left = 304
+    Top = 128
+    Width = 282
+    Height = 37
+    Caption = 'Czerwony wygrywa!'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
     Visible = False
   end
   object Button1: TButton
-    Left = 344
-    Top = 328
-    Width = 185
+    Left = 320
+    Top = 336
+    Width = 249
     Height = 57
     Cursor = crHandPoint
     Caption = 'Nowa gra'
@@ -795,20 +814,21 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 288
-    Top = 248
-    Width = 281
+    Left = 320
+    Top = 272
+    Width = 249
     Height = 57
     Cursor = crHandPoint
-    Caption = 'Nast'#281'pna runda >'
+    Caption = 'Nast'#281'pna runda'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clTeal
+    Font.Color = clWindowText
     Font.Height = -32
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
     Visible = False
+    OnClick = Button2Click
   end
   object redtop: TTimer
     Enabled = False
@@ -838,10 +858,10 @@ object Form1: TForm1
     Left = 64
     Top = 312
   end
-  object Timer_pilka: TTimer
+  object Timer_ball: TTimer
     Enabled = False
     Interval = 15
-    OnTimer = Timer_pilkaTimer
+    OnTimer = Timer_ballTimer
     Left = 424
     Top = 168
   end

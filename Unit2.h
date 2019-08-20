@@ -20,7 +20,9 @@ __published:	// IDE-managed Components
         TLabel *Label6;
         TLabel *Label7;
         TLabel *Label8;
+        TLabel *Label9;
         void __fastcall Button1Click(TObject *Sender);
+        void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm2(TComponent* Owner);

@@ -1,9 +1,11 @@
 object Form2: TForm2
-  Left = 549
-  Top = 302
-  Width = 483
-  Height = 265
+  Left = 444
+  Top = 276
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsToolWindow
   Caption = 'Instrukcja'
+  ClientHeight = 227
+  ClientWidth = 467
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,6 +14,7 @@ object Form2: TForm2
   Font.Style = []
   OldCreateOrder = False
   Visible = True
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -37,14 +40,14 @@ object Form2: TForm2
   end
   object Label4: TLabel
     Left = 8
-    Top = 72
+    Top = 88
     Width = 123
     Height = 13
     Caption = 'Dla urozmaicenia zabawy:'
   end
   object Label5: TLabel
     Left = 8
-    Top = 88
+    Top = 104
     Width = 435
     Height = 13
     Caption = 
@@ -53,30 +56,38 @@ object Form2: TForm2
   end
   object Label6: TLabel
     Left = 8
-    Top = 104
+    Top = 120
     Width = 258
     Height = 13
     Caption = 'Im d'#322'u'#380'ej odbijasz, tym pi'#322'ka szybciej przemieszcza si'#281'.'
   end
   object Label7: TLabel
     Left = 8
-    Top = 120
+    Top = 136
     Width = 162
     Height = 13
     Caption = 'Mo'#380'esz dowolnie zmienia pole gry.'
   end
   object Label8: TLabel
     Left = 8
-    Top = 144
+    Top = 168
     Width = 65
     Height = 13
     Caption = 'Mi'#322'ej zabawy!'
   end
+  object Label9: TLabel
+    Left = 8
+    Top = 64
+    Width = 228
+    Height = 13
+    Caption = 'Gracz  kt'#243'ry pierwszy zdob'#281'dzie 5 pkt wygrywa .'
+  end
   object Button1: TButton
     Left = 200
-    Top = 168
+    Top = 192
     Width = 75
     Height = 25
+    Cursor = crHandPoint
     Caption = 'Ok!'
     TabOrder = 0
     OnClick = Button1Click
